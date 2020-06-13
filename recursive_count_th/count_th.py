@@ -7,12 +7,17 @@ def count_th(word):
     
     # TBC
     count = 0
+    # Check if 'th' exists in the word
     if 'th' in word:
+        # Check if the first two letters are 'th'
         if word[0] + word[1] == 'th':
+            # Add to the count, remove the first two letters, repeat and add the count
             count = 1
             return count + count_th(word[2:])
         else:
-            return count + count_th(word[1:])ß
+            # Remove the first letter, repeat and add the count
+            return count + count_th(word[1:])
     else:
+        # Return the current count
         return count
 
